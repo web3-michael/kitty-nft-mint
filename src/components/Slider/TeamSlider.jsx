@@ -7,65 +7,57 @@ import Team from '../Team';
 export default function TeamSlider({sliderItemBg, sliderItemVariant}) {
   const data = [
     {
-      src:'/images/member1.png',
-      name:'Jeffrey Robin', 
-      designation:'UI Designer',
+      src:'/images/Briantoshi.png',
+      name:'Briantoshi Nakamoto', 
+      designation:'Co-founder, Product Development',
       facebookHref:'/',
       linkedinHref:'/',
       whatsappHref:'/'
     },
     {
-      src:'/images/member2.png',
-      name:'Pamela Newborn', 
-      designation:'UI Designer',
+      src:'/images/Gnostics.png',
+      name:'The SchrodingerMan', 
+      designation:'Co-founder, Solidity Dev',
       facebookHref:'/',
       linkedinHref:'/',
       whatsappHref:'/'
     },
     {
-      src:'/images/member3.png',
-      name:'Jeffrey Bassett', 
-      designation:'UI Designer',
+      src:'/images/Goran.png',
+      name:'Goran', 
+      designation:'Co-founder, Technical Advisor',
       facebookHref:'/',
       linkedinHref:'/',
       whatsappHref:'/'
     },
     {
-      src:'/images/member4.png',
-      name:'Steven S. Cook', 
-      designation:'UI Designer',
+      src:'/images/gonthier.png',
+      name:'Gonthier Mickael', 
+      designation:'Marketing Advisor',
       facebookHref:'/',
       linkedinHref:'/',
       whatsappHref:'/'
     },
     {
-      src:'/images/member1.svg',
-      name:'Diane B. Lyons', 
-      designation:'Digital Marketing',
+      src:'/images/fudfighter.png',
+      name:'FUD Fighter', 
+      designation:'Marketing Advisor',
       facebookHref:'/',
       linkedinHref:'/',
       whatsappHref:'/'
     },
     {
-      src:'/images/member2.svg',
-      name:'Nancy Riddell', 
-      designation:'UI Designer',
+      src:'/images/jarjar.png',
+      name:'Jar Jar', 
+      designation:'PR and Community Management',
       facebookHref:'/',
       linkedinHref:'/',
       whatsappHref:'/'
     },
     {
-      src:'/images/member3.svg',
-      name:'Helen Herman', 
-      designation:'Product Designer',
-      facebookHref:'/',
-      linkedinHref:'/',
-      whatsappHref:'/'
-    },
-    {
-      src:'/images/member4.svg',
-      name:'Lindsay Baker', 
-      designation:'UI Designer',
+      src:'/images/andrew.png',
+      name:'Andrew', 
+      designation:'Public Relation & Advisor',
       facebookHref:'/',
       linkedinHref:'/',
       whatsappHref:'/'
