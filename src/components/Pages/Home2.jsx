@@ -60,7 +60,7 @@ export default function Home2() {
             <Section className='cs-light_bg text-center cs-radius_10'>
               <Spacing lg='60' md='60'/>
               <FunFact 
-                number='365'
+                number='438'
                 title='Total Items'
               />
               <Spacing lg='60' md='60'/>
@@ -71,7 +71,7 @@ export default function Home2() {
             <Section className='cs-light_bg text-center cs-radius_10'>
               <Spacing lg='60' md='60'/>
               <FunFact 
-                number='1125'
+                number='67'
                 title='Total Owners'
               />
               <Spacing lg='60' md='60'/>
@@ -82,7 +82,7 @@ export default function Home2() {
             <Section className='cs-light_bg text-center cs-radius_10'>
               <Spacing lg='60' md='60'/>
               <FunFact 
-                number='1.72'
+                number='0.07'
                 title='Floor Price'
               />
               <Spacing lg='60' md='60'/>
@@ -93,7 +93,7 @@ export default function Home2() {
             <Section className='cs-light_bg text-center cs-radius_10'>
               <Spacing lg='60' md='60'/>
               <FunFact 
-                number='42.2'
+                number='0.02'
                 title='Volume Traded'
               />
               <Spacing lg='60' md='60'/>
@@ -170,14 +170,14 @@ export default function Home2() {
               <Section className="row text-center">
                 <Section className="col-6">
                   <Spacing lg='60' md='30'/>
-                  <img src="/images/about_img_1.png" alt="About" />
+                  <img src="/images/1.gif" alt="About" />
                   <Spacing lg='25' md='25'/>
-                  <img src="/images/about_img_3.png" alt="About" />
+                  <img src="/images/2.gif" alt="About" />
                 </Section>
                 <Section className="col-6">
-                  <img src="/images/about_img_2.png" alt="About" />
+                  <img src="/images/kdnft.png" alt="About" />
                   <Spacing lg='25' md='25'/>
-                  <img src="/images/about_img_4.png" alt="About" />
+                  <img src="/images/3.png" alt="About" />
                 </Section>
               </Section>
             </Section>
