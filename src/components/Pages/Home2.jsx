@@ -4,8 +4,6 @@ import { pageTitle } from '../../helper'
 import Accordion from '../Accordion'
 import Button from '../Button'
 import CardStype3 from '../Card/CardStype3'
-import ContactForm from '../ContactForm'
-import ContactInfo from '../ContactInfo'
 import FunFact from '../FunFact'
 import Hero from '../Hero'
 import IconBox from '../IconBox'
@@ -270,29 +268,8 @@ export default function Home2() {
       </Section>
       <Spacing lg='95' md='65'/>
       <Section className="container">
-       
-        
       </Section>
-      <Section id='contact'>
-        <Spacing lg='90' md='70'/>
-        <Section className="container">
-          <SectionHeading 
-            title='Get in touch'
-            subtitle='Contact us'
-          />
-          <Spacing lg='50' md='30'/>
-          <Section className="row">
-            <Section className="col-lg-6">
-              <ContactForm/>
-            </Section>
-            <Section className="col-lg-5 offset-lg-1">
-            <Spacing lg='30' md='40'/>
-              <ContactInfo/>
-            </Section>
-          </Section>
-        </Section>
-        <Spacing lg='100' md='70'/>
-      </Section>
+      
     </>
   )
 }
