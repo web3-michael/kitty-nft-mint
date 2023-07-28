@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Section from '../Section'
 
 export default function ModeSwitch() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
   const activateMode = async () => {
     if(darkMode === false) {
       document.body.classList.add('cs-dark')
