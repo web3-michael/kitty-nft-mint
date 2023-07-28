@@ -4,7 +4,7 @@ import Section from '../Section'
 
 export default function Button({btnLink, btnText, variant, children}) {
   return (
-    <Link to={btnLink} className={`cs-btn ${variant?variant:''}`}>
+    <Link to={btnLink} target="_blank" className={`cs-btn ${variant?variant:''}`}>
       {children}
       <Section tag='span'>{btnText}</Section>
     </Link>

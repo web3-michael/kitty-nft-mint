@@ -158,7 +158,7 @@ export default function Home2() {
                 <Spacing lg='25' md='15'/>
                 <Button 
                   variant='cs-btn_filed cs-accent_btn'
-                  btnLink='https://opensea.io/collection/kittydinger' 
+                  btnLink='https://opensea.io/collection/kittydinger'
                   btnText='COLLECT NFTs'
                 >
                   <Icon icon="ic:outline-library-add" />
