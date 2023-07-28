@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Section from '../Section'
 
 export default function ModeSwitch() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
   const activateMode = async () => {
     if(darkMode === false) {
       document.body.classList.add('cs-dark')
@@ -21,11 +21,13 @@ export default function ModeSwitch() {
     if(localStorage.getItem('Theme')==='light_mode') {
       document.body.classList.remove('cs-dark')
       document.body.classList.add('cs-light')
+      setDarkMode(false)
     } else if (localStorage.getItem('Theme')==='dark_mode') {
       document.body.classList.add('cs-dark')
       document.body.classList.remove('cs-light')
+      setDarkMode(true)
     }
-    if(!localStorage.getItem('Theme')){
+    else{
       localStorage.setItem('Theme', 'dark_mode')
       setDarkMode(true)
     }
