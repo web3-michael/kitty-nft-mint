@@ -21,8 +21,8 @@ export default function Hero({title, mintNumber, mintMax, mintPrice, mintDeathLi
             <Section className="cs-btn_group">
               <Modal modalType='mint' btnText='Mint Now' />
               <Button 
-                btnLink='/' 
-                btnText='Join the Waitlist' 
+                btnLink='https://opensea.io/collection/kittydinger' 
+                btnText='Opensea Collection' 
                 variant='cs-color1'
               />
             </Section>
