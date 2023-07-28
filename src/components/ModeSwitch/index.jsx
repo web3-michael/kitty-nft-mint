@@ -4,16 +4,17 @@ import Section from '../Section'
 
 export default function ModeSwitch() {
   const [darkMode, setDarkMode] = useState(true)
+  console.log(darkMode)
   const activateMode = async () => {
     if(darkMode === false) {
-      document.body.classList.remove('cs-dark')
-      document.body.classList.add('cs-light')
-      await localStorage.setItem('Theme', 'light_mode')
-    }
-    if(darkMode === true) {
       document.body.classList.add('cs-dark')
       document.body.classList.remove('cs-light')
-      await localStorage.setItem('Theme', 'dark_mode')
+       localStorage.setItem('Theme', 'dark_mode')
+    }
+    else if(darkMode === true) {
+      document.body.classList.remove('cs-dark')
+      document.body.classList.add('cs-light')
+       localStorage.setItem('Theme', 'light_mode')
       
     }
     setDarkMode(!darkMode)
@@ -22,15 +23,14 @@ export default function ModeSwitch() {
     if(localStorage.getItem('Theme')==='light_mode') {
       document.body.classList.remove('cs-dark')
       document.body.classList.add('cs-light')
-      setDarkMode(false)
     } else if (localStorage.getItem('Theme')==='dark_mode') {
       document.body.classList.add('cs-dark')
       document.body.classList.remove('cs-light')
-      setDarkMode(true)
     }
     else{
       localStorage.setItem('Theme', 'dark_mode')
-      setDarkMode(true)
+      document.body.classList.add('cs-dark')
+      document.body.classList.remove('cs-light')
     }
   }, [])
 
