@@ -37,7 +37,7 @@
   .cs-hero_img {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(10%);
     right: 14%;
     z-index: 3;
   }
