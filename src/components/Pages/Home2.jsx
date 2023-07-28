@@ -11,7 +11,6 @@ import Hero from '../Hero'
 import IconBox from '../IconBox'
 import Section from '../Section'
 import SectionHeading from '../SectionHeading'
-import BlogSlider from '../Slider/BlogSlider'
 import RoadmapSlider from '../Slider/RoadmapSlider'
 import TeamSlider from '../Slider/TeamSlider'
 import Spacing from '../Spacing'
@@ -150,7 +149,7 @@ export default function Home2() {
               <Spacing lg='0' md='40'/>
               <Section className='cs-right_space_150'>
                 <SectionHeading 
-                  title='Grab Special Monkey NFTs'
+                  title='Grab Special Kitty NFTs'
                   subtitle='COLLECT'
                 />
                 <Spacing lg='20' md='20'/>
@@ -159,7 +158,7 @@ export default function Home2() {
                 <Spacing lg='25' md='15'/>
                 <Button 
                   variant='cs-btn_filed cs-accent_btn'
-                  btnLink='https://opensea.io/' 
+                  btnLink='https://opensea.io/collection/kittydinger' 
                   btnText='COLLECT NFTs'
                 >
                   <Icon icon="ic:outline-library-add" />
@@ -271,14 +270,8 @@ export default function Home2() {
       </Section>
       <Spacing lg='95' md='65'/>
       <Section className="container">
-        <Section className="text-center">
-          <SectionHeading 
-            title='Recent nft news'
-            subtitle='BLOG'
-          />
-        </Section>
-        <Spacing lg='50' md='30'/>
-        <BlogSlider/>
+       
+        
       </Section>
       <Section id='contact'>
         <Spacing lg='90' md='70'/>
