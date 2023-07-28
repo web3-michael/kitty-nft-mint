@@ -6,14 +6,15 @@ export default function ModeSwitch() {
   const [darkMode, setDarkMode] = useState(true)
   const activateMode = async () => {
     if(darkMode === false) {
-      document.body.classList.add('cs-dark')
-      document.body.classList.remove('cs-light')
-      await localStorage.setItem('Theme', 'dark_mode')
-    }
-    if(darkMode === true) {
       document.body.classList.remove('cs-dark')
       document.body.classList.add('cs-light')
       await localStorage.setItem('Theme', 'light_mode')
+    }
+    if(darkMode === true) {
+      document.body.classList.add('cs-dark')
+      document.body.classList.remove('cs-light')
+      await localStorage.setItem('Theme', 'dark_mode')
+      
     }
     setDarkMode(!darkMode)
   }
