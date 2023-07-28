@@ -40,7 +40,7 @@ export default function Home2() {
     <>
       <Hero 
         title='Discover &amp; Collect <br />Kitty Dinger NFT'
-        mintNumber='0'
+        mintNumber='438'
         mintMax='3000'
         mintPrice='0.07'
         mintDeathLine='22 July' 
