@@ -20,17 +20,17 @@ export default function Footer() {
           </Section>
           <Section className="cs-height_25 cs-height_lg_25" />
           <Section className="cs-social_btns cs-center">
-            <Link to="/" className="cs-center cs-primary_color cs-accent_bg_hover cs-light_bg cs-white_color_hover">
+            <Link to="https://twitter.com/KittyDinger" className="cs-center cs-primary_color cs-accent_bg_hover cs-light_bg cs-white_color_hover">
               <Icon icon="fa6-brands:twitter" />            
             </Link>
-            <Link to="/" className="cs-center cs-primary_color cs-accent_bg_hover cs-light_bg cs-white_color_hover">
+            <Link to="https://www.instagram.com/theschrodingerofficial/?utm_medium=copy_link" className="cs-center cs-primary_color cs-accent_bg_hover cs-light_bg cs-white_color_hover">
               <Icon icon="fa6-brands:instagram" />
             </Link>
-            <Link to="/" className="cs-center cs-primary_color cs-accent_bg_hover cs-light_bg cs-white_color_hover">
-              <Icon icon="fa6-brands:youtube" />
+            <Link to="https://discord.com/invite/evHSXcgba9" className="cs-center cs-primary_color cs-accent_bg_hover cs-light_bg cs-white_color_hover">
+              <Icon icon="fa6-brands:discord" />
             </Link>
-            <Link to="/" className="cs-center cs-primary_color cs-accent_bg_hover cs-light_bg cs-white_color_hover">
-              <Icon icon="fa6-brands:whatsapp" />              
+            <Link to="https://t.me/Schrodingercommunity" className="cs-center cs-primary_color cs-accent_bg_hover cs-light_bg cs-white_color_hover">
+              <Icon icon="fa6-brands:telegram" />              
             </Link>
           </Section>
         </Section>
