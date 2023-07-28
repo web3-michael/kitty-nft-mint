@@ -13,19 +13,13 @@ export default function Cta() {
       <Section className="cs-height_30 cs-height_lg_30" />
       <Section className="cs-cta_btns cs-center">
         <Button 
-          btnLink='/' 
+          btnLink='https://t.me/Schrodingercommunity' 
           btnText='Join Our Community' 
           variant='cs-btn_filed cs-white_btn_2'
         >
           <Icon icon="fluent:people-community-add-28-regular" />
         </Button>
-        <Button 
-          btnLink='/' 
-          btnText='Join The Waitlist' 
-          variant='cs-btn_filed cs-white_btn'
-        >
-          <Icon icon="material-symbols:add-reaction-outline" />
-        </Button>
+     
       </Section>
     </Section>
   )
