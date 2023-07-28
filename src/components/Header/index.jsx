@@ -4,7 +4,6 @@ import { Link as ScrollLink } from 'react-scroll'
 import Modal from '../Modal';
 import ModeSwitch from '../ModeSwitch';
 import Section from '../Section';
-import DropDown from './DropDown';
 import './header.scss'
 
 export default function Header() {
