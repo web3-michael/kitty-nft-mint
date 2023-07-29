@@ -25,7 +25,8 @@ export default function MintCard() {
     address: "0x46084F00dD87B2f50c1E898399241E760D2284E3",
     abi: abi,
     functionName: "mint",
-    args:[address, counter]
+    args:[address, counter],
+    value: `${70000000000000000 * counter}`,
   });
   const { data, error, isError, write } = useContractWrite(config);
   const { isLoading, isSuccess } = useWaitForTransaction({
@@ -73,7 +74,7 @@ export default function MintCard() {
         </li>
         <li>
           <Section className="cs-list_left">Total Price</Section>
-          <Section className="cs-list_right">0.5 ETH</Section>
+          <Section className="cs-list_right">{counter * 0.07} ETH</Section>
         </li>
       </ul>
       <Section className="cs-height_25 cs-height_lg_25" />
