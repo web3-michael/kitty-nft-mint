@@ -6,7 +6,7 @@ import Section from '../Section';
 
 export default function Modal({modalType, btnText, btnIcon}) {
   const [modal, setModal] = useState(false);
-  return (
+  return(
     <>
       <Section tag='span' className="cs-btn cs-btn_filed cs-accent_btn" onClick={()=>setModal(!modal)}>
         {btnIcon && <Icon icon="ion:wallet-outline" />}
@@ -23,7 +23,7 @@ export default function Modal({modalType, btnText, btnIcon}) {
                 </svg>            
               </button>
               {modalType==='mint' && <MintCard/>}
-              {modalType==='connect' && <ConnectCard/>}
+              {modalType==='connect' && <ConnectCard updateModal={setModal}/>}
             </Section>
           </Section>
         </Section>
