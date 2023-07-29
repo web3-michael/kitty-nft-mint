@@ -85,12 +85,13 @@ export default function MintCard() {
         <span>{isLoading ? "Minting..." : "Mint Now"}</span>
       </button>
       {isSuccess && (
-        <div>
-          Successfully minted your NFT!
-          <div>
-            <a href={`https://etherscan.io/tx/${data?.hash}`}>Etherscan</a>
-          </div>
-        </div>
+        // <div>
+        //   Successfully minted your NFT!
+        //   <div>
+        //     <a href={`https://etherscan.io/tx/${data?.hash}`}>Etherscan</a>
+        //   </div>
+        // </div>
+        console.log("DOnezooooo", `https://etherscan.io/tx/${data?.hash}`)
       )}
       {(isPrepareError || isError) && (
         <div>Error: {(prepareError || error)?.message}</div>
