@@ -25,6 +25,7 @@ export default function MintCard() {
     address: "0x46084F00dD87B2f50c1E898399241E760D2284E3",
     abi: abi,
     functionName: "mint",
+    args:[address, ]
   });
   const { data, error, isError, write } = useContractWrite(config);
   const { isLoading, isSuccess } = useWaitForTransaction({
