@@ -40,11 +40,7 @@ export default function ConnectCard({updateModal}) {
           </Link>
         </li>
       </ul>
-      <Section className="cs-height_15 cs-height_lg_15" />
-      <Section tag="p" className="cs-m0">
-        Wallet are many variations of pass <br />
-        ges of availabl.
-      </Section>
+
     </Section>
   );
 }
