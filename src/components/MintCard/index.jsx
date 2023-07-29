@@ -11,7 +11,7 @@ import abi from "../../util/ABI.js";
 
 export default function MintCard() {
   const [counter, setCounter] = useState(0);
-  const { address, isConnected} = useAccount();
+  const { address} = useAccount();
   const handelSubtract = () => {
     if (counter > 0) {
       setCounter(counter - 1);
@@ -25,7 +25,7 @@ export default function MintCard() {
     address: "0x46084F00dD87B2f50c1E898399241E760D2284E3",
     abi: abi,
     functionName: "mint",
-    args:[address, ]
+    args:[address, counter]
   });
   const { data, error, isError, write } = useContractWrite(config);
   const { isLoading, isSuccess } = useWaitForTransaction({
