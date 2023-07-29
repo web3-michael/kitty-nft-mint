@@ -125,7 +125,7 @@ export default function Header() {
                       className="cs-btn cs-btn_filed cs-accent_btn"
                       onClick={open}
                     >
-                      <Section tag="span">{address}</Section>
+                      <Section tag="span">{address.substring(0, 4) + "..." + address.substring(address.length - 4, address.length + 1)}</Section>
                     </Section>
                   </Section>
                 </Section>
