@@ -13,8 +13,7 @@ export default function ConnectCard() {
         <li><Link to="/"><img src="/images/trustwallet.svg" alt="Logo" /></Link></li>
         <li><Link to="/"><img src="/images/walletconnect.svg" alt="Logo" /></Link></li>
       </ul>
-      <Section className="cs-height_15 cs-height_lg_15" />
-      <Section tag='p' className="cs-m0">Wallet are many variations of pass <br />ges of availabl.</Section>
+      
     </Section>
   )
 }
