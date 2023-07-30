@@ -24,29 +24,26 @@ export default function Home2() {
   }, []);
   const accordionData1 = [
     {
-      question: "How to Mint an NFT?",
-      answer:
-        "There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages. There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.",
-    },
-    {
-      question: "What happens once purchase NFT?",
-      answer:
-        "There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages. There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.",
-    },
-    {
-      question: "How can I obtain NFTs?",
-      answer:
-        "There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages. There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.",
-    },
-    {
-      question: "Do NFTs appreciate in value?",
-      answer:
-        "There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages. There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.",
-    },
-  ];
 
-  const { data } = useContractRead({
-    address: "0x84aAAc4aEb115D01Cf339F8EBaCc96a397cDfEC5",
+      question: 'How to Mint an NFT?',
+      answer: 'Connect your wallet, make sure you are in eth mainnet. Now Click on Mint'
+    },
+    {
+      question: 'How many NFT can I buy?',
+      answer: 'A wallet can hold a maximum of 12 NFTs'
+    },
+    {
+      question: 'How happens after I mint?',
+      answer: 'A KittyDinger NFT will be mined in your wallet addresss, you can then look at your NFT from opensea'
+    },
+    {
+      question: 'Do NFTs appreciate in value?',
+      answer: 'As the demand increases, The value of KittyDinger NFT increases. The total supply is fixed at 3000 hence the demand increasing is inevitable'
+    }
+  ]
+  const { data, isError, isLoading } = useContractRead({
+    address: '0x46084F00dD87B2f50c1E898399241E760D2284E3',
+
     abi: abi,
     functionName: "totalSupply",
   });
@@ -55,13 +52,15 @@ export default function Home2() {
       <Hero
         title="Discover &amp; Collect <br />Kitty Dinger NFT"
         mintNumber={data ? data.toString() : "Not Connected"}
-        mintMax="3000"
-        mintPrice="0.07"
-        mintDeathLine="22 July"
-        bgUrl="/images/hero_img_3.jpeg"
-        heroImageUrl="/images/hero_img_1.png"
-        animatedUrl="/images/hero_img_sm.png"
-        variant="cs-type1"
+
+        mintMax='3000'
+        mintPrice='0.07'
+        mintDeathLine='22 July' 
+        bgUrl='/images/hero_img_3.jpeg'
+        heroImageUrl='/images/hero_img_edited.png' 
+        animatedUrl='/images/hero_img_sm.png' 
+        variant='cs-type1'
+
         bubble
       />
       <Spacing lg="100" md="70" />
@@ -137,24 +136,15 @@ export default function Home2() {
                   title="Grab Special Kitty NFTs"
                   subtitle="COLLECT"
                 />
-                <Spacing lg="20" md="20" />
-                <Section tag="p">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't
-                  look.
-                </Section>
-                <Section tag="p">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't
-                  look.
-                </Section>
-                <Spacing lg="25" md="15" />
-                <Button
-                  variant="cs-btn_filed cs-accent_btn"
-                  btnLink="https://opensea.io/collection/kittydinger"
-                  btnText="COLLECT NFTs"
+
+                <Spacing lg='20' md='20'/>
+                <Section tag='p'>Schrodinger is a community-driven cryptocurrency meme project named after Elon Musk's cat. We aim to build an ecosystem of decentralized applications while generating funds to support charities around the world. We believe that by creating a community-driven token that supports and is intrinsically linked to non-profits worldwide, we can play a role in making the world a better place.</Section>
+                <Spacing lg='25' md='15'/>
+                <Button 
+                  variant='cs-btn_filed cs-accent_btn'
+                  btnLink='https://opensea.io/collection/kittydinger'
+                  btnText='COLLECT NFTs'
+
                 >
                   <Icon icon="ic:outline-library-add" />
                 </Button>
@@ -182,10 +172,12 @@ export default function Home2() {
       <Section className="container">
         <Section className="row">
           <Section className="col-lg-4">
-            <IconBox
-              variant="cs-type1 text-center"
-              title="Gaming NFTS"
-              subtitle="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+
+            <IconBox 
+              variant='cs-type1 text-center' 
+              title='Kittpad' 
+              subtitle='To help tackle the problem of rugs and scams in decentralized finance, Kittpad will provide its holders with early access.'
+
             >
               <svg
                 width={52}
@@ -206,10 +198,13 @@ export default function Home2() {
             <Spacing lg="25" md="25" />
           </Section>
           <Section className="col-lg-4">
-            <IconBox
-              variant="cs-type1 text-center"
-              title="Play To Earn"
-              subtitle="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+
+
+            <IconBox 
+              variant='cs-type1 text-center' 
+              title='Kittup Wallet' 
+              subtitle='With proper funding, KittUp wallet will be developed to integrate multiple addresses on many different blockchains.'
+
             >
               <svg
                 width={52}
@@ -230,10 +225,12 @@ export default function Home2() {
             <Spacing lg="25" md="25" />
           </Section>
           <Section className="col-lg-4">
-            <IconBox
-              variant="cs-type1 text-center"
-              title="Metaverse Ready"
-              subtitle="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form."
+
+            <IconBox 
+              variant='cs-type1 text-center' 
+              title='Kitty Metaverse' 
+              subtitle='The Schrodinger P2E game will be a fun, relaxing, and lucrative way for the community to earn daily passive income.'
+
             >
               <svg
                 width={52}

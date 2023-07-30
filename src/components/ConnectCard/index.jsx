@@ -4,8 +4,10 @@ import Section from "../Section";
 
 import { useWeb3Modal } from "@web3modal/react";
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
-import { useConnect} from 'wagmi'
-import { mainnet} from "wagmi/chains";
+
+import { useConnect } from 'wagmi'
+import { mainnet,goerli } from "wagmi/chains";
+
 
 import { useWalletState } from "../Context/WalletStateProvider";
 
@@ -16,7 +18,9 @@ export default function ConnectCard({ updateModal }) {
     defaultChain: "mainnet",
   });
   const connector = new MetaMaskConnector({
-    chains: [mainnet],
+
+    chains: [mainnet,goerli],
+
     options: {
       shimDisconnect: true,
     },

@@ -33,7 +33,7 @@ export default function MintCard() {
     error: prepareError,
     isError: isPrepareError,
   } = usePrepareContractWrite({
-    address: "0x84aAAc4aEb115D01Cf339F8EBaCc96a397cDfEC5",
+    address: "0x46084F00dD87B2f50c1E898399241E760D2284E3",
     abi: abi,
     functionName: "mint",
     args: [address, counter],
@@ -118,7 +118,7 @@ export default function MintCard() {
       )}
       <Section className="cs-height_25 cs-height_lg_25" />
       {(isPrepareError || isError) && (
-        <div className="error">Error: {(prepareError || error)?.name}</div>
+        <div className="error">Error: {(prepareError || error)?.message.split('.')[0]}</div>
       )}
       {/* <Section className="cs-height_15 cs-height_lg_15" />
       <Section tag="p" className="cs-m0 text-center">

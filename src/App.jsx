@@ -16,9 +16,11 @@ import {
 
 import { Web3Modal } from "@web3modal/react";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import { mainnet, sepolia} from "wagmi/chains";
 
-const chains = [mainnet, sepolia];
+import { mainnet,goerli } from "wagmi/chains";
+
+
+const chains = [mainnet,goerli];
 const projectId = "d9914d65e833c8cb44de178573bd447f";
 
 const { publicClient } = configureChains(chains, [w3mProvider({ projectId })]);
