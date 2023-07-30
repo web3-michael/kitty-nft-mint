@@ -15,8 +15,8 @@ export default function Header() {
   const [mobileToggle, setMobileToggle] = useState(false);
   const { address, isConnected } = useAccount();
   const { disconnect } = useDisconnect()
-  const { open, close } = useWeb3Modal();
-  const { walletState, setWalletState } = useWalletState();
+  const { open } = useWeb3Modal();
+  const { walletState } = useWalletState();
 
   if (isConnected) {
     return (

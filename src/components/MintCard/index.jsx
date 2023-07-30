@@ -8,7 +8,8 @@ import {
   useContractWrite,
   useWaitForTransaction,
 } from "wagmi";
-import { useAccount } from "wagmi";
+import { useAccount, useContractRead } from "wagmi";
+
 
 import abi from "../../util/ABI.js";
 
@@ -42,6 +43,13 @@ export default function MintCard() {
   const { isLoading, isSuccess } = useWaitForTransaction({
     hash: data?.hash,
   });
+
+  const ReadData = useContractRead({
+    address: "0x84aAAc4aEb115D01Cf339F8EBaCc96a397cDfEC5",
+    abi: abi,
+    functionName: "totalSupply",
+  });
+  
   return (
     <Section className="cs-mint_secton">
       <Section
@@ -58,7 +66,7 @@ export default function MintCard() {
       <ul className="cs-list cs-style2 cs-mp0 cs-primary_color cs-primary_font">
         <li>
           <Section className="cs-list_left">Remaining</Section>
-          <Section className="cs-list_right">1 / 3000 Minted</Section>
+          <Section className="cs-list_right">{`${ReadData.data?.toString()} / 3000 Minted`}</Section>
         </li>
         <li>
           <Section className="cs-list_left">
