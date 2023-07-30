@@ -8,36 +8,36 @@ export default function RoadmapSlider() {
   const data = [
     {
       phase:'Phase 1', 
-      title:'Launch collection',
-      subtitle:'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.',
+      title:'Q1 2022',
+      subtitle:
+      `
+      • NFT Launch
+      • Chainlink integration
+      • KittUp Wallet Audit
+      `,
     },{
       phase:'Phase 2', 
-      title:'Community Build',
-      subtitle:'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.',
+      title:'Q2 2022',
+      subtitle:`
+      • Marketing Campaign
+      • Tier 1-2 Cex listings
+      • Partnerships`,
     },{
       phase:'Phase 3', 
-      title:'Public Services',
-      subtitle:'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.',
+      title:'Q3 2022',
+      subtitle:`
+      • Kittmanji Tournament
+      • Staking USDT Distribution
+      • Times Square Billboard
+      `,
     },{
       phase:'Phase 4', 
-      title:'Next Generation',
-      subtitle:'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.',
-    },{
-      phase:'Phase 5', 
-      title:'Launch collection',
-      subtitle:'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.',
-    },{
-      phase:'Phase 6', 
-      title:'Community Build',
-      subtitle:'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.',
-    },{
-      phase:'Phase 7', 
-      title:'Public Services',
-      subtitle:'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.',
-    },{
-      phase:'Phase 8', 
-      title:'Next Generation',
-      subtitle:'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.',
+      title:'Q4 2022',
+      subtitle:`
+      • Wikipedia Page
+      • Kittchain (Layer 2 Blockchain)
+      • Global Outreach
+      `,
     },
   ]
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
@@ -103,7 +103,9 @@ export default function RoadmapSlider() {
             cardNumber={index+1}
             phase={item.phase}
             title={item.title}
-            subtitle={item.subtitle}
+            subtitle={item.subtitle.split('\n').map((sentence, sentenceIndex) => (
+              <p key={sentenceIndex}>{sentence}</p>
+            ))}
           />
         </Section>
       ))}

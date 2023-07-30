@@ -25,19 +25,19 @@ export default function Home2() {
   const accordionData1 = [
     {
       question: 'How to Mint an NFT?',
-      answer: 'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages. There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.'
+      answer: 'Connect your wallet, make sure you are in eth mainnet. Now Click on Mint'
     },
     {
-      question: 'What happens once purchase NFT?',
-      answer: 'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages. There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.'
+      question: 'How many NFT can I buy?',
+      answer: 'A wallet can hold a maximum of 12 NFTs'
     },
     {
-      question: 'How can I obtain NFTs?',
-      answer: 'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages. There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.'
+      question: 'How happens after I mint?',
+      answer: 'A KittyDinger NFT will be mined in your wallet addresss, you can then look at your NFT from opensea'
     },
     {
       question: 'Do NFTs appreciate in value?',
-      answer: 'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages. There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.'
+      answer: 'As the demand increases, The value of KittyDinger NFT increases. The total supply is fixed at 3000 hence the demand increasing is inevitable'
     }
   ]
   const { data, isError, isLoading } = useContractRead({
