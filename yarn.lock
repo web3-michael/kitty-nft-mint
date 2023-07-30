@@ -10609,6 +10609,7 @@ __metadata:
   resolution: "kitty-react@workspace:."
   dependencies:
     "@babel/core": ^7.22.9
+    "@babel/plugin-transform-private-property-in-object": ^7.22.5
     "@iconify/react": ^4.0.0
     "@testing-library/jest-dom": ^5.17.0
     "@testing-library/react": ^14.0.0
