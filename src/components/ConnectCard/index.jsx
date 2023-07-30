@@ -12,7 +12,9 @@ import { useWalletState } from "../Context/WalletStateProvider";
 export default function ConnectCard({ updateModal }) {
   const {walletState, setWalletState} = useWalletState();
   
-  const { open } = useWeb3Modal();
+  const { open } = useWeb3Modal({
+    defaultChain: "mainnet",
+  });
   const connector = new MetaMaskConnector({
     chains: [mainnet],
     options: {
