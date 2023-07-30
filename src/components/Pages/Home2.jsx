@@ -13,6 +13,10 @@ import RoadmapSlider from '../Slider/RoadmapSlider'
 import TeamSlider from '../Slider/TeamSlider'
 import Spacing from '../Spacing'
 
+import { useContractRead } from "wagmi";
+
+import abi from "../../util/ABI.js";
+
 export default function Home2() {
   pageTitle('Home-2');
   useEffect(() => {
@@ -36,11 +40,16 @@ export default function Home2() {
       answer: 'There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages. There are many variations of pass ges of Lorem Ipsum available, but the majority have suffered alterat ion in some form. There are many variations of passages.'
     }
   ]
+  const { data, isError, isLoading } = useContractRead({
+    address: '0x84aAAc4aEb115D01Cf339F8EBaCc96a397cDfEC5',
+    abi: abi,
+    functionName: 'totalSupply',
+  })
   return (
     <>
       <Hero 
         title='Discover &amp; Collect <br />Kitty Dinger NFT'
-        mintNumber='438'
+        mintNumber={data ? data.toString() : "Not Connected"}
         mintMax='3000'
         mintPrice='0.07'
         mintDeathLine='22 July' 
