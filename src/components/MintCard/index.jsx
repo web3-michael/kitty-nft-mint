@@ -11,7 +11,7 @@ import abi from "../../util/ABI.js";
 
 export default function MintCard() {
   const [counter, setCounter] = useState(0);
-  const { address} = useAccount();
+  const {address} = useAccount();
   const handelSubtract = () => {
     if (counter > 0) {
       setCounter(counter - 1);
