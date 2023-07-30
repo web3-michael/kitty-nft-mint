@@ -33,13 +33,13 @@ export default function MintCard() {
     error: prepareError,
     isError: isPrepareError,
   } = usePrepareContractWrite({
-    //Sep 0x84aaac4aeb115d01cf339f8ebacc96a397cdfec5
+    //Sep     0x84aaac4aeb115d01cf339f8ebacc96a397cdfec5
     //Mainnet 0x46084F00dD87B2f50c1E898399241E760D2284E3
     address: "0x46084F00dD87B2f50c1E898399241E760D2284E3",
     abi: abi,
     functionName: "mint",
     args: [address, counter],
-    value: `${70000000000000000 * counter}`,
+    value: `${20000000000000000 * counter}`,
   });
   const { data, error, isError, write } = useContractWrite(config);
   const { isLoading, isSuccess } = useWaitForTransaction({
@@ -72,7 +72,7 @@ export default function MintCard() {
         </li>
         <li>
           <Section className="cs-list_left">
-            Quantity / <span className="cs-accent_color">0.07 ETH</span>
+            Quantity / <span className="cs-accent_color">0.02 ETH</span>
           </Section>
           <Section className="cs-list_right">
             <Section className="cs-quantity">
@@ -95,7 +95,7 @@ export default function MintCard() {
         <li>
           <Section className="cs-list_left">Total Price</Section>
           <Section className="cs-list_right">
-            {(counter * 0.07).toFixed(3)} ETH
+            {(counter * 0.02).toFixed(3)} ETH
           </Section>
         </li>
       </ul>

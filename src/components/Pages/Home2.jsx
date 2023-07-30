@@ -54,7 +54,7 @@ export default function Home2() {
         mintNumber={data ? data.toString() : "Not Connected"}
 
         mintMax='3000'
-        mintPrice='0.07'
+        mintPrice='0.02'
         mintDeathLine='22 July' 
         bgUrl='/images/hero_img_3.jpeg'
         heroImageUrl='/images/hero_img_edited.png' 
@@ -85,7 +85,7 @@ export default function Home2() {
           <Section className="col-lg-3 col-6">
             <Section className="cs-light_bg text-center cs-radius_10">
               <Spacing lg="60" md="60" />
-              <FunFact number="0.07" title="Floor Price" />
+              <FunFact number="0.02" title="Floor Price" />
               <Spacing lg="60" md="60" />
             </Section>
             <Spacing lg="25" md="25" />
