@@ -7,12 +7,16 @@ import Section from "../Section";
 import "./header.scss";
 import { useWeb3Modal } from "@web3modal/react";
 
-import { useAccount } from "wagmi";
+import { useAccount, useDisconnect } from "wagmi";
+
+import { useWalletState } from "../Context/WalletStateProvider";
 
 export default function Header() {
   const [mobileToggle, setMobileToggle] = useState(false);
-  const { address, isConnected} = useAccount();
+  const { address, isConnected } = useAccount();
+  const { disconnect } = useDisconnect()
   const { open, close } = useWeb3Modal();
+  const { walletState, setWalletState } = useWalletState();
 
   if (isConnected) {
     return (
@@ -120,13 +124,37 @@ export default function Header() {
                 <Section className="cs-main_header_right">
                   <Section className="cs-toolbox">
                     <ModeSwitch />
-                    <Section
-                      tag="span"
-                      className="cs-btn cs-btn_filed cs-accent_btn"
-                      onClick={open}
-                    >
-                      <Section tag="span">{address.substring(0, 4) + "..." + address.substring(address.length - 4, address.length + 1)}</Section>
-                    </Section>
+                    {walletState === "WalletConnect" ? (
+                      <Section
+                        tag="span"
+                        className="cs-btn cs-btn_filed cs-accent_btn"
+                        onClick={open}
+                      >
+                        <Section tag="span">
+                          {address.substring(0, 4) +
+                            "..." +
+                            address.substring(
+                              address.length - 4,
+                              address.length + 1
+                            )}
+                        </Section>
+                      </Section>
+                    ) : (
+                      <Section
+                        tag="span"
+                        className="cs-btn cs-btn_filed cs-accent_btn"
+                        onClick={disconnect}
+                      >
+                        <Section tag="span">
+                          {address.substring(0, 4) +
+                            "..." +
+                            address.substring(
+                              address.length - 4,
+                              address.length + 1
+                            )}
+                        </Section>
+                      </Section>
+                    )}
                   </Section>
                 </Section>
               </Section>
