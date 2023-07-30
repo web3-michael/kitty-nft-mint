@@ -6,7 +6,7 @@ import { useWeb3Modal } from "@web3modal/react";
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 
 import { useConnect } from 'wagmi'
-import { mainnet,goerli } from "wagmi/chains";
+import { mainnet} from "wagmi/chains";
 
 
 import { useWalletState } from "../Context/WalletStateProvider";
@@ -19,7 +19,7 @@ export default function ConnectCard({ updateModal }) {
   });
   const connector = new MetaMaskConnector({
 
-    chains: [mainnet,goerli],
+    chains: [mainnet],
 
     options: {
       shimDisconnect: true,
@@ -50,12 +50,12 @@ export default function ConnectCard({ updateModal }) {
           </Link>
         </li>
         <li>
-          <Link to="/">
-            <img src="/images/coinbase.svg" alt="Logo" />
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
+          <Link to="/"
+           onClick={() => {
+            open();
+            updateModal(false);
+            setWalletState("WalletConnect")
+          }}>
             <img src="/images/trustwallet.svg" alt="Logo" />
           </Link>
         </li>

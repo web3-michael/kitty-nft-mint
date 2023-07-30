@@ -33,6 +33,8 @@ export default function MintCard() {
     error: prepareError,
     isError: isPrepareError,
   } = usePrepareContractWrite({
+    //Sep 0x84aaac4aeb115d01cf339f8ebacc96a397cdfec5
+    //Mainnet 0x46084F00dD87B2f50c1E898399241E760D2284E3
     address: "0x46084F00dD87B2f50c1E898399241E760D2284E3",
     abi: abi,
     functionName: "mint",
