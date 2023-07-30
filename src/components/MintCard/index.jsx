@@ -110,7 +110,7 @@ export default function MintCard() {
       )}
       <Section className="cs-height_25 cs-height_lg_25" />
       {(isPrepareError || isError) && (
-        <div className="error">Error: {(prepareError || error)?.message}</div>
+        <div className="error">Error: {(prepareError || error)?.name}</div>
       )}
       {/* <Section className="cs-height_15 cs-height_lg_15" />
       <Section tag="p" className="cs-m0 text-center">

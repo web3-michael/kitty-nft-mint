@@ -25,7 +25,7 @@ export default function Hero({title, mintNumber, mintMax, mintPrice, mintDeathLi
           <Section tag='h2' className="cs-hero_secondary_title cs-font_24 cs-font_18_sm">{isConnected ? `${mintNumber} / ${mintMax} Minted` : 'Not Connected'}</Section>
             <Section tag='h1' className="cs-hero_title cs-font_64 cs-font_36_sm cs-bold">{parse(title)}</Section>
             <Section className="cs-btn_group">
-              {isConnected ? <Modal modalType='mint' btnText='Mint Now' /> : <Modal modalType="connect" btnText="Connect" btnIcon />}
+              {isConnected ? <Modal modalType='mint' btnText='Mint Now' /> : <Modal modalType="connect" btnText="Mint Now" btnIcon />}
               <Button 
                 btnLink='https://opensea.io/collection/kittydinger' 
                 btnText='Opensea Collection' 
