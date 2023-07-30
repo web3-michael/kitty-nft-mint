@@ -6,7 +6,12 @@ import './hero.scss'
 import Section from '../Section';
 import Modal from '../Modal';
 
+import { useAccount } from "wagmi";
+
 export default function Hero({title, mintNumber, mintMax, mintPrice, mintDeathLine, bgUrl, heroImageUrl, animatedUrl, variant, bubble, overlay, bgOpacity}) {
+
+  const { isConnected} = useAccount();
+
   return (
     
       <Section tag='section' className={`cs-hero cs-style1 ${variant?variant:''}`} id="hero" >
@@ -19,7 +24,7 @@ export default function Hero({title, mintNumber, mintMax, mintPrice, mintDeathLi
           <Section tag='h2' className="cs-hero_secondary_title cs-font_24 cs-font_18_sm">{mintNumber} / {mintMax}&nbsp; Minted</Section>
             <Section tag='h1' className="cs-hero_title cs-font_64 cs-font_36_sm cs-bold">{parse(title)}</Section>
             <Section className="cs-btn_group">
-              <Modal modalType='mint' btnText='Mint Now' />
+              {isConnected ? <Modal modalType='mint' btnText='Mint Now' /> : <Modal modalType="connect" btnText="Connect" btnIcon />}
               <Button 
                 btnLink='https://opensea.io/collection/kittydinger' 
                 btnText='Opensea Collection' 

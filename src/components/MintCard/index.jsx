@@ -1,31 +1,41 @@
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import Section from "../Section";
+import "./mintCard.css";
+
 import {
   usePrepareContractWrite,
   useContractWrite,
   useWaitForTransaction,
 } from "wagmi";
 import { useAccount } from "wagmi";
+
 import abi from "../../util/ABI.js";
 
 export default function MintCard() {
-  const [counter, setCounter] = useState(0);
-  const { address} = useAccount();
+  const [counter, setCounter] = useState(1);
+  const { address } = useAccount();
+
   const handelSubtract = () => {
-    if (counter > 0) {
+    if (counter > 1) {
       setCounter(counter - 1);
     }
   };
+  const handleIncrement = () => {
+    if (counter < 12) {
+      setCounter(counter + 1);
+    }
+  };
+
   const {
     config,
     error: prepareError,
     isError: isPrepareError,
   } = usePrepareContractWrite({
-    address: "0x46084F00dD87B2f50c1E898399241E760D2284E3",
+    address: "0x84aAAc4aEb115D01Cf339F8EBaCc96a397cDfEC5",
     abi: abi,
     functionName: "mint",
-    args:[address, counter],
+    args: [address, counter],
     value: `${70000000000000000 * counter}`,
   });
   const { data, error, isError, write } = useContractWrite(config);
@@ -65,7 +75,7 @@ export default function MintCard() {
               {counter}
               <button
                 className="cs-quantity_btn cs-center"
-                onClick={() => setCounter(counter + 1)}
+                onClick={handleIncrement}
               >
                 <Icon icon="material-symbols:add-rounded" />
               </button>
@@ -74,33 +84,47 @@ export default function MintCard() {
         </li>
         <li>
           <Section className="cs-list_left">Total Price</Section>
-          <Section className="cs-list_right">{counter * 0.07} ETH</Section>
+          <Section className="cs-list_right">
+            {(counter * 0.07).toFixed(3)} ETH
+          </Section>
         </li>
       </ul>
       <Section className="cs-height_25 cs-height_lg_25" />
       <button
         className="cs-btn cs-btn_filed cs-accent_btn text-center text-uppercase w-100"
-        disabled={!write || isLoading}
+        disabled={!write || isLoading }
         onClick={() => write()}
       >
         <span>{isLoading ? "Minting..." : "Mint Now"}</span>
       </button>
+      <Section className="cs-height_25 cs-height_lg_25" />
       {isSuccess && (
-        // <div>
-        //   Successfully minted your NFT!
-        //   <div>
-        //     <a href={`https://etherscan.io/tx/${data?.hash}`}>Etherscan</a>
-        //   </div>
-        // </div>
-        console.log("DOnezooooo", `https://etherscan.io/tx/${data?.hash}`)
+        <div className="success">
+          Successfully minted your NFT!
+          <div className="ether-link">
+            <a href={`https://etherscan.io/tx/${data?.hash}`}>
+              Go To Etherscan
+            </a>
+          </div>
+        </div>
       )}
+      <Section className="cs-height_25 cs-height_lg_25" />
       {(isPrepareError || isError) && (
-        <div>Error: {(prepareError || error)?.message}</div>
+        <div className="error">Error: {(prepareError || error)?.message}</div>
       )}
-      <Section className="cs-height_15 cs-height_lg_15" />
+      {/* <Section className="cs-height_15 cs-height_lg_15" />
       <Section tag="p" className="cs-m0 text-center">
         Minting Live
-      </Section>
+      </Section> */}
     </Section>
   );
 }
+
+// (
+//   <div className="success">
+//     Successfully minted your NFT!
+//     <div className="ether-link">
+//       <a href={`https://etherscan.io/tx/${data?.hash}`}>Go To Etherscan</a>
+//     </div>
+//   </div>
+// )
