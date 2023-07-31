@@ -47,7 +47,7 @@ export default function MintCard() {
   });
 
   const ReadData = useContractRead({
-    address: "0x84aAAc4aEb115D01Cf339F8EBaCc96a397cDfEC5",
+    address: "0x46084F00dD87B2f50c1E898399241E760D2284E3",
     abi: abi,
     functionName: "totalSupply",
   });

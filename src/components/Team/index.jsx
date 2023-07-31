@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Section from '../Section'
 import './team.scss'
 
-export default function Team({src, name, designation, facebookHref, linkedinHref, whatsappHref, variant, bgUrl}) {
+export default function Team({src, name, designation, facebookHref, linkedinHref,twitterHref, whatsappHref, variant, bgUrl}) {
   return (
     <Section className={`cs-team cs-style1 ${variant?variant:''} text-center cs-light_bg`}>
       <Section className="cs-member_thumb cs-bg" style={{backgroundImage:`${bgUrl && `url(${bgUrl})`}`}}>
@@ -25,6 +25,11 @@ export default function Team({src, name, designation, facebookHref, linkedinHref
           {linkedinHref && (
             <Link to={linkedinHref} className="cs-primary_color cs-accent_color_hover">
               <Icon icon="fa6-brands:linkedin-in" />                           
+            </Link>
+          )}
+          {twitterHref && (
+            <Link to={twitterHref} className="cs-primary_color cs-accent_color_hover">
+              <Icon icon="fa6-brands:twitter" />                           
             </Link>
           )}
           {whatsappHref && (

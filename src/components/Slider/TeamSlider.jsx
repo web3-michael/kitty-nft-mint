@@ -10,57 +10,50 @@ export default function TeamSlider({sliderItemBg, sliderItemVariant}) {
       src:'/images/Briantoshi.png',
       name:'Briantoshi Nakamoto', 
       designation:'Co-founder, Product Development',
-      facebookHref:'/',
-      linkedinHref:'/',
-      whatsappHref:'/'
+      twitterHref: 'https://twitter.com/BriantoshiKitty',
+    
     },
     {
       src:'/images/Gnostics.png',
       name:'The SchrodingerMan', 
+      twitterHref: 'https://theschrodinger.com/',
       designation:'Co-founder, Solidity Dev',
-      facebookHref:'/',
-      linkedinHref:'/',
-      whatsappHref:'/'
+  
     },
     {
       src:'/images/Goran.png',
       name:'Goran', 
       designation:'Co-founder, Technical Advisor',
-      facebookHref:'/',
-      linkedinHref:'/',
-      whatsappHref:'/'
+      twitterHref: 'https://twitter.com/Goranx10',
+  
     },
     {
       src:'/images/gonthier.png',
       name:'Gonthier Mickael', 
+      twitterHref: 'https://twitter.com/MickaelGonthier',
       designation:'Marketing Advisor',
-      facebookHref:'/',
-      linkedinHref:'/',
-      whatsappHref:'/'
+
     },
     {
       src:'/images/fudfighter.png',
       name:'FUD Fighter', 
+      twitterHref: 'https://twitter.com/SaitamaAngel',
       designation:'Marketing Advisor',
-      facebookHref:'/',
-      linkedinHref:'/',
-      whatsappHref:'/'
+   
     },
     {
       src:'/images/jarjar.png',
       name:'Jar Jar', 
+      twitterHref: 'https://twitter.com/JarSchrodinger',
       designation:'PR and Community Management',
-      facebookHref:'/',
-      linkedinHref:'/',
-      whatsappHref:'/'
+
     },
     {
       src:'/images/andrew.png',
       name:'Andrew', 
+      twitterHref: 'https://twitter.com/AcdcCrypto',
       designation:'Public Relation & Advisor',
-      facebookHref:'/',
-      linkedinHref:'/',
-      whatsappHref:'/'
+    
     },
   ]
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
@@ -130,6 +123,7 @@ export default function TeamSlider({sliderItemBg, sliderItemVariant}) {
             designation={item.designation}
             facebookHref={item.facebookHref}
             linkedinHref={item.linkedinHref}
+            twitterHref={item.twitterHref}
             whatsappHref={item.whatsappHref}
           />
         </Section>
