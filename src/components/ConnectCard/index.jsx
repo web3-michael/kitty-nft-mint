@@ -46,7 +46,7 @@ export default function ConnectCard({ updateModal }) {
               setWalletState("Metamask")
             }}
           >
-            <img src="/images/metamask.svg" alt="Logo" />
+            <img src="/images/metamask.svg" alt="Logo" height = "100" width ="200" />
           </Link>
         </li>
         <li>
@@ -56,7 +56,7 @@ export default function ConnectCard({ updateModal }) {
             updateModal(false);
             setWalletState("WalletConnect")
           }}>
-            <img src="/images/trustwallet.svg" alt="Logo" />
+            <img src="/images/trustwallet.svg" alt="Logo" height = "100" width ="200"/>
           </Link>
         </li>
         <li>
@@ -68,7 +68,7 @@ export default function ConnectCard({ updateModal }) {
               setWalletState("WalletConnect")
             }}
           >
-            <img src="/images/walletconnect.svg" alt="Logo" />
+            <img src="/images/walletconnect.svg" alt="Logo" height = "100" width ="200"/>
           </Link>
         </li>
       </ul>
